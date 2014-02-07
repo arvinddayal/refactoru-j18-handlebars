@@ -32,14 +32,13 @@ var productsData = {
   ]
 };
 
-
-  var source = $('#myscript').html();
-
-
-
+  var source = $('#product-list').html();
   var template = Handlebars.compile(source);
-
-
-
   $('#product-container').append(template(productsData));
+
+  var wishlist = $('#wishlist').html();
+  var template1 = Handlebars.compile(wishlist);
+  $('#add-button').on("click", $('#wishlist').append(template1(productsData.title)));
+
+
 });
