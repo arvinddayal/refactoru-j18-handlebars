@@ -2,20 +2,26 @@
 <html lang='en'>
 	<head>
 		<link rel="shortcut icon" href="A.png" type="image/x-icon">
+		<link type="text/css" rel="stylesheet" href="http://necolas.github.com/normalize.css/2.1.3/normalize.css"/>
+		<link type="text/css" rel="stylesheet" href="main.css"/>		
 		<meta charset='UTF-8'>		
 		<title>JS 18 - Handlebars</title>
 	</head>
 	<body>
 
+		<header>Video Game Store</header>
+
 		<div id="product-container">
-	<img src="">
+	
 		<script id="myscript" type="text/x-handlebars-template">
 	
 			<div class="product">
 				{{#each productsList}}
-					<h1>{{this.title}}</h1>
-					<img src="{{this.image}}">
-					<h2>{{this.cost}}</h2>
+					<div>
+						<img class="product-group" src="{{this.image}}">	
+						<h2 class="product-group top">{{this.title}}</h2>
+						<h2 class="product-group top">${{this.cost}}</h2>
+					</div>
 				{{/each}}
 			</div>
 	
